@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Itim&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="register-container">
+        <h2>Cadastro</h2>
+
+        
+        <div class="campo">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" placeholder="Digite seu nome completo">
+        </div>
+
+
+        <div class="mesma-linha">
+
+            <div class="campo">
+                <label for="cpf">CPF</label>
+                <input type="text" id="cpf" placeholder="000.000.000-00" maxlength="14">
+            </div>
+
+            <div class="campo">
+                <label>Sexo</label>
+                <div class="radio-group">
+                    <label class="radio-item">
+                        <input type="radio" name="sexo">
+                        <span>Masculino</span>
+                    </label>
+            
+                    <label class="radio-item">
+                        <input type="radio" name="sexo">
+                        <span>Feminino</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="mesma-linha">
+
+            <div class="campo">
+                <label for="dtNasc">Data de nascimento</label>
+                <input type="date" id="dtNasc">
+            </div>
+
+            <div class="campo">
+                <label for="estCivil">Estado Civil</label>
+                <select id="estCivil">
+                    <option>Selecione</option>
+                    <option>Solteiro(a)</option>
+                    <option>Casado(a)</option>
+                    <option>Divorciado(a)</option>
+                    <option>Viúvo(a)</option>
+                    <option>Separado(a)</option>
+                    <option>União estável</option>
+                </select>
+            </div>
+        </div>
+        <div class="mesma-linha">
+            <div class="campo">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" placeholder="exemplo@email.com">
+            </div>
+
+            <div class="campo">
+                <label for="tel">Telefone</label>
+                <input type="text" id="tel" placeholder="(00) 00000-0000" maxlength="14">
+            </div>
+        </div>
+
+        <div class="mesma-linha">
+            <div class="campo">
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" placeholder="Crie sua senha">
+            </div>
+
+            <div class="campo">
+                <label for="confiSenha">Confirmação de senha</label>
+                <input type="password" id="confiSenha" placeholder="Confirme a sua senha">
+            </div>
+        </div>
+
+        <div class="campo">
+            <div class="termos">
+                <label for="terCond">
+                    <input type="checkbox" id="terCond">
+                    Aceitar todos os termos de uso e condições
+                </label>
+            </div>
+        </div>
+        
+        <button id="cadastrar">Cadastrar</button>
+        <button id="voltar">Voltar</button>
+        
+
+        <p class="mensagem" id="mensagem"></p>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

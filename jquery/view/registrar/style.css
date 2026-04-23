@@ -1,0 +1,216 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Iner", sans-serif;
+    color: rgba(44, 44, 44, 0.75);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: linear-gradient(to bottom, #F291A3, #F2B6C1, #F2D0D3);
+}
+
+.register-container {
+    width: 538px;
+    height: 750px;
+    display: block;
+    flex-direction: column;
+    background-color: rgba(242, 242, 242, 10%);
+    border: 2px solid rgba(255,255, 255,.08);
+    border-radius: 2%;
+    color: rgba(44, 44, 44, 0.5);
+    box-shadow: 1px 1px 2px 1px rgba(44, 44, 44, 0.15) ;
+    backdrop-filter: blur(100px);
+}
+
+.register-container h2 {
+    padding: 20px 40px;
+    font-family: "Itim", sans-serif;
+    font-size: 60px;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #2c2c2c;
+}
+
+.campo {
+    margin-bottom: 15px;
+    padding: 0 15px; /* move label e input juntos */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.campo label {
+    color: rgba(44, 44, 44, 0.75);
+    font-weight: 500;
+}
+
+.campo input {
+    background-color: rgba(242, 242, 242, 0.05);
+    border: 2.2px solid #F291A3;
+    border-radius: 40px;
+    outline: none;
+
+    color: rgba(44, 44, 44, 1);
+
+    margin: 0; 
+    padding: 0 50px 0 20px;
+
+    box-shadow:
+        0px 2px 6px rgba(0, 0, 0, 0.05),
+        inset 0px 2px 5px rgba(0, 0, 0, 0.03);
+
+    width: 100%;
+    height: 40px;
+}
+.campo input:focus {
+    border-color: #d3657a;
+    box-shadow: 0 8px 20px rgba(0,0,0,0);
+}  
+
+.mesma-linha{
+    display: flex;
+    gap: 20px;
+}
+
+.mesma-linha .campo {
+    flex: 1;
+}
+button {
+    width: 500px;
+    height: 55px;
+    margin: 12px 15px; 
+    padding: 10px;
+    border: solid 1px #F291A3 ;
+    color: #2c2c2c;
+    background-color: transparent;
+    font-size: 16px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    border-color: #d3657a;
+}
+
+.mensagem {
+    margin-top: 15px;
+    text-align: center;
+    font-weight: 500;
+    display: none;
+}
+
+a {
+    text-decoration: none;
+    color: #d3657a;
+    font-weight: 600;
+}
+
+.sucesso{
+    color: #057305;
+}
+
+.erro {
+    color: #D9043D;
+}
+
+p {
+    text-align: center;
+}
+
+
+/*radio*/
+.radio-group {
+    display: flex;
+    gap: 20px;
+    padding: 5px 10px;
+}
+
+/* cada item */
+.radio-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+}
+
+/* radio padrão */
+.radio-item input[type="radio"] {
+    appearance: auto; /*volta ao padrão*/
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    accent-color: #F291A3; /* deixa rosa*/
+}
+
+.termos {
+    padding: 0 15px;
+}
+
+/* força ficar em linha */
+.termos label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    color: rgba(44, 44, 44, 0.75);
+
+    width: fit-content; /* impede quebrar linha por largura */
+}
+
+/* checkbox */
+.termos input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: #F291A3;
+    cursor: pointer;
+    flex-shrink: 0; /* impede "empurrar" o texto */
+}
+
+select {
+    width: 100%;
+    height: 40px;
+    padding: 0 40px 0 20px;
+    
+    border: 2.2px solid #F291A3;
+    border-radius: 40px;
+
+    background-color: rgba(242, 242, 242, 0.05);
+    color: rgba(44, 44, 44, 0.85);
+
+    outline: none;
+
+    box-shadow:
+        0px 2px 6px rgba(0, 0, 0, 0.05),
+        inset 0px 2px 5px rgba(0, 0, 0, 0.03);
+
+    appearance: none; /* remove estilo padrão */
+    cursor: pointer;
+}
+select option {
+    background-color: #f3dee2;
+    color: #2c2c2c;
+}
+
+/* foco */
+select:focus {
+    border-color: #f291a3;
+}
+
+/* seta personalizada */
+.campo {
+    position: relative;
+}
+
+.campo select {
+    background-image: url("data:image/svg+xml,%3Csvg fill='%23F291A3' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 18px;
+}
